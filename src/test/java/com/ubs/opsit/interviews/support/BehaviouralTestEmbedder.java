@@ -47,7 +47,7 @@ public final class BehaviouralTestEmbedder extends ConfigurableEmbedder {
         if (paths == null || paths.isEmpty()) {
             throw new IllegalStateException("No story paths found for state machine");
         }
-        LOG.info("Running [" + this.getClass().getSimpleName() + "] with spring_stories [" + paths + "]");
+        LOG.debug("Running {} with spring_stories {}", this.getClass().getSimpleName(), paths);
         configuredEmbedder().runStoriesAsPaths(paths);
     }
 

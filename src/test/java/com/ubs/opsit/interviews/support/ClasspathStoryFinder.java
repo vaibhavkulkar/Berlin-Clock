@@ -33,7 +33,7 @@ public final class ClasspathStoryFinder {
     private static Collection<File> findFilesThatMatch(String aFilenameWithWildcards) {
         WildcardFileFilter regexFileFilter = new WildcardFileFilter(aFilenameWithWildcards);
         List<File> rootDirsToSearchFrom = getRootDirs();
-        LOG.info("Searching for stories called [{}] in [{}]", aFilenameWithWildcards, rootDirsToSearchFrom);
+        LOG.debug("Searching for stories called {} in {}", aFilenameWithWildcards, rootDirsToSearchFrom);
 
         List<File> ret = new ArrayList<File>() ;
         for (File f : rootDirsToSearchFrom) {
